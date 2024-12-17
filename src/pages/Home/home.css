@@ -1,0 +1,133 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  height: calc(100vh - 50px);
+  overflow: visible;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  mask-image: linear-gradient(to right, transparent, black 100%);
+  -weblit-mask-image: linear-gradient(to right, transparent, black, 100%);
+}
+
+.trailer-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.trailer-video.visible {
+  opacity: 1;
+}
+
+.hero-caption {
+  position: absolute;
+  width: 100%;
+  padding-left: 3%;
+  top: 37%;
+  z-index: 6;
+}
+
+.caption-img {
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+.hero-caption p {
+  max-width: 550px;
+  font-size: 17px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 80px;
+  margin-top: 25px;
+}
+
+.hero-btns .btn img {
+  width: 35px;
+}
+
+.hero-btns .btn {
+  border: 0;
+  outline: 0;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-btns .btn.dark-btn {
+  color: #fff;
+  background: rgba(109, 109, 110, 0.7);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(23, 23, 23, 0.61),
+    rgb(16, 16, 16)
+  );
+  z-index: 4;
+}
+
+.hero-btns .btn:hover {
+  background: #ffffffbf;
+}
+
+.hero-btns .btn.dark-btn:hover {
+  background: #6d6d6e66;
+}
+
+.more-cards {
+  margin-top: 10rem;
+  padding-left: 3%;
+}
+
+@media screen and (min-width: 1750px) {
+  .hero {
+    position: relative;
+    height: calc(100vh - 50vh);
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .more-cards {
+    margin-top: 5rem;
+    padding-left: 3%;
+  }
+}

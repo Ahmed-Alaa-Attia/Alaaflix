@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 4rem;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  color: #e5e5e5;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  z-index: 100;
+  transition: background-color 0.4s;
+}
+
+.navbar-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.navbar-left img {
+  width: 92px;
+  height: 30px;
+  margin-right: 2.7rem;
+}
+
+.navbar-left img,
+.navbar-left ul li:hover {
+  cursor: pointer;
+  color: #acacac;
+  transition: color 0.2s ease-in;
+}
+
+.navbar-left ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-left ul li {
+  list-style: none;
+  padding: 1.5rem 0;
+}
+
+.navbar-left .active {
+  color: #fff;
+  font-weight: 400;
+}
+
+.active:hover {
+  cursor: default;
+  color: inherit;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.navbar-right .icons {
+  width: 20px;
+  cursor: pointer;
+}
+
+.navbar-right .navbar-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar-right .navbar-profile img {
+  border-radius: 4px;
+}
+
+.caret-icon {
+  transition: transform 0.3s ease;
+}
+
+.caret-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1.5rem 1rem;
+  width: 220px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.user p:hover {
+  text-decoration: underline;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link p:hover {
+  text-decoration: underline;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.logout p:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-left ul {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 2rem;
+  }
+}
+
+.nav-dark {
+  background-color: #121212;
+  color: #fff;
+}
+ 
